@@ -35,7 +35,7 @@ Archive and one source of your choice given from the MusicBrainz response.
 ### performance considerations
 
 1. Cache the result from 3rd party service as much as possible, setting the TTL to be 10m
-2. resilience, considering using 
+
 
 
 ### future work & improvements
