@@ -28,8 +28,8 @@ Archive and one source of your choice given from the MusicBrainz response.
 
 
 ### How to run this implementation
-
-1. go to repo root and run ```mvn spring-boot:run```
+1. You need to have a redis-server running, and then configure it in application.properties 
+2. go to repo root and run ```mvn spring-boot:run```
 
 
 ### performance considerations
