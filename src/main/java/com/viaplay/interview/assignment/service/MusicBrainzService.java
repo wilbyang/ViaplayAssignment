@@ -36,7 +36,8 @@ public class MusicBrainzService {
 
         try {
             musicBrainz = restTemplate.getForObject(musicBrainzEndpoint, MusicBrainz.class);
-        } catch (HttpClientErrorException ex) {
+        } catch (Exception ex) {
+            log.error("calling musicBrainz api error", ex);
             musicBrainz = NOT_FOUND;
         }
         return musicBrainz;

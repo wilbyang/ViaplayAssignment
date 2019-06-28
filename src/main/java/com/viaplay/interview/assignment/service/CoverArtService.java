@@ -40,7 +40,9 @@ public class CoverArtService {
 
         try {
             releaseArtCover = restTemplate.getForObject(discogsEndpoint, ReleaseArtCover.class);
-        } catch (HttpClientErrorException ex) {
+        } catch (Exception ex) {
+            log.error("calling coverart api error", ex);
+
             releaseArtCover = NOT_FOUND;
         }
         return releaseArtCover;

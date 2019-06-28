@@ -35,7 +35,8 @@ public class DiscogsService {
 
         try {
             profile = restTemplate.getForObject(discogsEndpoint, DiscogProfile.class);
-        } catch (HttpClientErrorException ex) {
+        } catch (Exception ex) {
+            log.error("calling discogs api error", ex);
             profile = NOT_FOUND;
         }
         return profile;
